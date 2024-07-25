@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --clr-orange: #ec5029;
   --clr-orange-light: #e95631;
@@ -37,7 +41,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Outfit;
-  color: var(--text-secondary);
+  color: var(--text-gray-light);
 }
 
 body {

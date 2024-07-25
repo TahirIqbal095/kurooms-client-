@@ -67,3 +67,17 @@ ul {
 .register .login:hover {
   background-color: var(--clr-green-light);
 }
+
+.sidebar {
+  display: none;
+}
+
+@media (max-width: 49em) {
+  .sidebar {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+  }
+}
