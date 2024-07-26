@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Cross2Icon } from "@radix-ui/react-icons";
+import { SidebarContext, ToggleContext } from "../../context/SidebarContext";
+
 import "./sidebar.css";
 
-function Sidebar(props) {
+function Sidebar() {
+  const setSidebar = useContext(SidebarContext);
+
   return (
     <>
       <div className="overlay"></div>
       <div className="sidebar-container">
         <div className="close-btn | absolute top-4 right-2">
-          <button>
+          <button onClick={setSidebar}>
             <Cross2Icon className="h-10 w-10"></Cross2Icon>
           </button>
         </div>

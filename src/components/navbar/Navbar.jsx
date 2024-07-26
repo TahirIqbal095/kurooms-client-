@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { TextAlignRightIcon } from "@radix-ui/react-icons";
 import Sidebar from "../sidebar/Sidebar";
+import { SidebarContext, ToggleContext } from "../../context/SidebarContext";
 
 import "./nav.css";
 
 function Navbar() {
-  const [sidebar, setSidebar] = useState(false);
+  const setSidebar = useContext(SidebarContext);
+  const toggle = useContext(ToggleContext);
 
   return (
     <>
@@ -26,11 +28,11 @@ function Navbar() {
         </div>
 
         <div className="sidebar">
-          <button className="z-10" onClick={() => setSidebar((prev) => !prev)}>
+          <button className="z-10" onClick={setSidebar}>
             <TextAlignRightIcon className="h-10 w-10 font-bold"></TextAlignRightIcon>
           </button>
         </div>
-        {sidebar ? <Sidebar toggle={sidebar} /> : null}
+        {toggle ? <Sidebar /> : null}
       </nav>
     </>
   );

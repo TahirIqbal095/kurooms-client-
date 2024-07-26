@@ -1,12 +1,9 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
-const SidebarContext = createContext();
+export const SidebarContext = createContext();
+export const ToggleContext = createContext();
 
-export function useSidebar() {
-  return useContext(SidebarContext);
-}
-
-export function SidebarContext({ children }) {
+export function SidebarProvider({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   function toggleSidebar() {
@@ -14,8 +11,10 @@ export function SidebarContext({ children }) {
   }
 
   return (
-    <SidebarContext.Provider value={{ sidebarOpen, toggleSidebar }}>
-      {children}
+    <SidebarContext.Provider value={toggleSidebar}>
+      <ToggleContext.Provider value={sidebarOpen}>
+        {children}
+      </ToggleContext.Provider>
     </SidebarContext.Provider>
   );
 }
