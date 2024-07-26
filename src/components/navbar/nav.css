@@ -41,33 +41,6 @@ ul {
   margin-left: 1.5rem;
 }
 
-.register button {
-  cursor: pointer;
-  margin: 0 1rem;
-  padding: 0.5rem 1.4rem;
-  border: none;
-  font-size: var(--fs-button);
-  font-weight: var(--fw-bold);
-  color: var(--clr-white);
-  border-radius: 1rem;
-}
-
-.register .signup {
-  background-color: var(--clr-orange);
-}
-
-.register .signup:hover {
-  background-color: var(--clr-orange-light);
-}
-
-.register .login {
-  background-color: var(--clr-green);
-}
-
-.register .login:hover {
-  background-color: var(--clr-green-light);
-}
-
 .sidebar {
   display: none;
 }

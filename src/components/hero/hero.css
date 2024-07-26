@@ -1,5 +1,6 @@
 .hero-heading h1 {
   font-size: var(--fs-primary-heading);
+  color: var(--text-gray-fast);
   font-weight: var(--fw-bold);
   line-height: 40px;
 }

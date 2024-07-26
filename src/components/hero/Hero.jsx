@@ -11,7 +11,7 @@ function Hero() {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
           officia, incidunt maiores quos Id, provident ea!
         </p>
-        <button className="btn | mt-6">View Rooms</button>
+        <button className="btn btn-orange | mt-6">View Rooms</button>
       </div>
 
       <div className="hero-img">

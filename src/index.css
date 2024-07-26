@@ -15,7 +15,7 @@
   --bg-white: #ffffff;
 
   --text-gray-fast: #333333;
-  --text-gray-light: #474646;
+  --text-gray-light: #626060;
 
   --fs-body: var(--fs-600);
   --fs-primary-heading: var(--fs-1000);
@@ -63,6 +63,13 @@ body {
   font-size: var(--fs-button);
   font-weight: var(--fw-bold);
   color: var(--bg-primary);
-  border-radius: 1rem;
+  border-radius: 2rem;
+}
+
+.btn-orange {
   background-color: var(--clr-orange);
+}
+
+.btn-green {
+  background-color: var(--clr-green);
 }
