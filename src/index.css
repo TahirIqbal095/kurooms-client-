@@ -15,10 +15,10 @@
   --bg-white: #ffffff;
 
   --text-gray-fast: #333333;
-  --text-gray-light: #414141;
+  --text-gray-light: #474646;
 
-  --fs-body: var(--fs-500);
-  --fs-primary-heading: var(--fs-800);
+  --fs-body: var(--fs-600);
+  --fs-primary-heading: var(--fs-1000);
   --fs-secondary-heading: var(--fs-700);
   --fs-nav: var(--fs-600);
   --fs-button: var(--fs-400);
@@ -34,6 +34,7 @@
   --fs-700: 1.275rem;
   --fs-800: 1.5rem;
   --fs-900: 2rem;
+  --fs-1000: 2.5rem;
 }
 
 * {
@@ -53,4 +54,15 @@ body {
 .container {
   width: min(1280px, 100% - (1rem) * 2);
   margin-inline: auto;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-size: var(--fs-button);
+  font-weight: var(--fw-bold);
+  color: var(--bg-primary);
+  border-radius: 1rem;
+  background-color: var(--clr-orange);
 }
