@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-  "homepage": "https://tahiriqbal095.github.io/kurooms-client-/",
+  "homepage": "https://tahiriqbal095.github.io/kurooms-client-",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "vite build",
+    "build": "react-scripts build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -30,5 +30,17 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "gh-pages": "^6.1.1",
     "vite": "^5.3.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

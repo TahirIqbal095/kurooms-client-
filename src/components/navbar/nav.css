@@ -1,11 +1,16 @@
 .nav-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--bg-white);
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgba(246, 243, 243, 0.8);
   font-size: var(--fs-nav);
   font-weight: var(--fw-semi-bold);
 }

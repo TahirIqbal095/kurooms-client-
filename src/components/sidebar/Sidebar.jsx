@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Cross2Icon } from "@radix-ui/react-icons";
-import { SidebarContext, ToggleContext } from "../../context/SidebarContext";
+import { SidebarContext } from "../../context/SidebarContext";
 
 import "./sidebar.css";
 

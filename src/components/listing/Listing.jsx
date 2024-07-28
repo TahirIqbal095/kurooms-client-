@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import Card from "./Card";
 import "./listing.css";
 
-function Listing(props) {
-  const [propertyDetails, setPropertyDetails] = useState(props);
+export default function Listing() {
+  <section>
+    <h1>Rooms Available</h1>
 
-  return (
-    <>
-      <div>hello</div>
-    </>
-  );
+    <div>
+      <Card />
+    </div>
+  </section>;
 }

@@ -24,25 +24,3 @@
   background-color: rgba(0, 0, 0, 0.5); /* Dimmed black overlay */
   z-index: 5; /* Ensure the overlay is below the sidebar */
 }
-
-.sidebar-btn button {
-  cursor: pointer;
-  padding: 0.5rem 1.4rem;
-  border: none;
-  font-size: var(--fs-button);
-  font-weight: var(--fw-bold);
-  color: var(--clr-white);
-  border-radius: 1rem;
-}
-
-.sidebar-btn .signup {
-  background-color: var(--clr-orange);
-}
-
-.sidebar-btn .login {
-  background-color: var(--clr-green);
-}
-
-.sidebar-btn .login:hover {
-  background-color: var(--clr-green-light);
-}

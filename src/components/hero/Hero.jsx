@@ -5,17 +5,16 @@ import "./hero.css";
 function Hero() {
   return (
     <section className="container hero-section">
-      <div className="hero-heading">
-        <h1>Find Rooms Quick and Easy</h1>
-        <p className="w-[35ch] mt-2">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
-          officia, incidunt maiores quos Id, provident ea!
+      <div className="hero-heading | mx-auto">
+        <h1>
+          Find Rooms <span className="underline-text">Quick</span> and{" "}
+          <span className="underline-text">Easy</span>
+        </h1>
+        <p className="max-w-[42ch] text-xl mt-6">
+          The ultimate solution for students seeking the perfect place to live.
+          Our platform features a diverse range of hostels and homes for rent
         </p>
-        <button className="btn btn-orange | mt-6">View Rooms</button>
-      </div>
-
-      <div className="hero-img">
-        <img src={assets.hero_img} alt="" />
+        <button className="btn-big btn-green | mt-8">View Rooms</button>
       </div>
     </section>
   );

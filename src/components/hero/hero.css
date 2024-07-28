@@ -9,7 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
+  padding: 4rem 0;
 }
 
 @media (max-width: 49em) {
@@ -18,6 +19,6 @@
     gap: 2rem;
   }
   .hero-heading h1 {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
 }
