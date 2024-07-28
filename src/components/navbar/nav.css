@@ -13,6 +13,7 @@
   background-color: rgba(246, 243, 243, 0.8);
   font-size: var(--fs-nav);
   font-weight: var(--fw-semi-bold);
+  z-index: 100;
 }
 
 ul {

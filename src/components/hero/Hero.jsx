@@ -14,7 +14,9 @@ function Hero() {
           The ultimate solution for students seeking the perfect place to live.
           Our platform features a diverse range of hostels and homes for rent
         </p>
-        <button className="btn-big btn-green | mt-8">View Rooms</button>
+        <button className="btn-big btn-green | mt-8 hover:scale-105 transition hover:shadow">
+          View Rooms
+        </button>
       </div>
     </section>
   );

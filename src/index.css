@@ -19,7 +19,7 @@
 
   --fs-body: var(--fs-600);
   --fs-primary-heading: var(--fs-1000);
-  --fs-secondary-heading: var(--fs-700);
+  --fs-secondary-heading: var(--fs-900);
   --fs-nav: var(--fs-600);
   --fs-button: var(--fs-400);
 
@@ -86,5 +86,10 @@ body {
 
 .underline-text {
   background: linear-gradient(to bottom, transparent 50%, #f2b407 50%);
+  color: var(--text-gray-fast);
+}
+
+.underline-text-white {
+  background: linear-gradient(to bottom, transparent 50%, #ffffff 50%);
   color: var(--text-gray-fast);
 }

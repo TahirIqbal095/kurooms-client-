@@ -22,8 +22,12 @@ function Navbar() {
             <li>About</li>
           </ul>
           <div className="register">
-            <button className="btn btn-orange | mx-2">Login</button>
-            <button className="btn btn-green | mx-2">Sign up</button>
+            <button className="btn btn-orange | mx-2 hover:scale-105 transition hover:shadow">
+              Login
+            </button>
+            <button className="btn btn-green | mx-2 hover:scale-105 transition hover:shadow">
+              Sign up
+            </button>
           </div>
         </div>
 

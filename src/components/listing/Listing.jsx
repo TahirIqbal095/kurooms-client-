@@ -1,12 +1,17 @@
 import Card from "./Card";
 import "./listing.css";
 
-export default function Listing() {
-  <section>
-    <h1>Rooms Available</h1>
-
-    <div>
-      <Card />
-    </div>
-  </section>;
+function Listing() {
+  return (
+    <section id="listings" className="container listing-section">
+      <div className="card-container | mt-6 p-6 grid sm:grid-cols-2 grid-cols-1 gap-4">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </section>
+  );
 }
+
+export default Listing;
