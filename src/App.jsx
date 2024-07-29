@@ -3,6 +3,7 @@ import { SidebarProvider } from "./context/SidebarContext";
 import Listing from "./components/listing/Listing";
 import Hero from "./components/hero/Hero";
 import Banner from "./components/banner/Banner";
+import Footer from "./components/footer/Footer";
 import "./index.css";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <Banner />
       <Listing />
+      <Footer />
     </>
   );
 }

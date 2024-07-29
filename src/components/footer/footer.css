@@ -1,0 +1,9 @@
+.footer-company p:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid var(--clr-green);
+}
