@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { TextAlignRightIcon } from "@radix-ui/react-icons";
 import Sidebar from "../sidebar/Sidebar";
 import { SidebarContext, ToggleContext } from "../../context/SidebarContext";

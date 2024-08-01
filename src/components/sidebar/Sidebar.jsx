@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { SidebarContext } from "../../context/SidebarContext";
 

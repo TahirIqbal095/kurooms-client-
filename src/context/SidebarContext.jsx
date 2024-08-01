@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const SidebarContext = createContext();
 export const ToggleContext = createContext();

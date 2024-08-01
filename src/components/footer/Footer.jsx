@@ -28,7 +28,7 @@ function Footer() {
           </div>
         </div>
 
-        <p className="text-center mt-10">
+        <p className="text-center mt-10 text-gray-600">
           © 2024 Kurooms, Inc. All rights reserved.
         </p>
       </footer>
