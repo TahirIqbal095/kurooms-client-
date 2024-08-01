@@ -14,7 +14,7 @@ function Banner() {
         </p>
         <div className="mt-8">
           <a
-            className="text-[#fontFd3cfcf] px-4 py-2 border-2 rounded-lg border-[#d3cfcf] hover:bg-[#d3cfcf]    hover:text-gray-800"
+            className="text-[#d3cfcf] px-4 py-2 border-2 rounded-lg border-[#d3cfcf] hover:bg-[#d3cfcf]    hover:text-gray-800"
             href="mailto:shahtahir786@gmail.com"
           >
             Contact Us

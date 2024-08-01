@@ -9,10 +9,10 @@ function Footer() {
             <p className="text-3xl text-gray-100 ">Kurooms</p>
             <div className="flex gap-4 text-gray-300 mt-6">
               <a href="">
-                <i class="fa-brands fa-github fa-xl | text-gray-300"></i>
+                <i className="fa-brands fa-github fa-xl | text-gray-300"></i>
               </a>
               <a href="">
-                <i class="fa-brands fa-linkedin fa-xl | text-gray-300"></i>
+                <i className="fa-brands fa-linkedin fa-xl | text-gray-300"></i>
               </a>
             </div>
           </div>

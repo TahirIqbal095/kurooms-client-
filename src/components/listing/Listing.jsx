@@ -7,14 +7,24 @@ function Listing() {
   const [cardData, setCardData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/")
-      .then((res) => res.json())
-      .then((data) => setCardData(data));
+    async function fetchCardData() {
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}`);
+        if (!response.ok) {
+          throw new Error("Response was not ok");
+        }
+
+        const result = await response.json();
+        setCardData(result);
+      } catch (error) {
+        console.log("Error fetching data: ", error);
+      }
+    }
+
+    fetchCardData();
   }, []);
 
-  const cardList = cardData.map((data) => {
-    <Card value={data} />;
-  });
+  const cardList = cardData.map((data) => <Card value={data} />);
 
   return (
     <section id="listings" className="container listing-section">

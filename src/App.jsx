@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import { SidebarProvider } from "./context/SidebarContext";
 
 import "./index.css";
+import { useEffect, useState } from "react";
 
 function App() {
   return (
