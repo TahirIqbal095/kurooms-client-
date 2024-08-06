@@ -10,7 +10,7 @@ function Listing() {
   useEffect(() => {
     async function fetchCardData() {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}`);
+        const response = await fetch("http://localhost:8000/");
         if (!response.ok) {
           throw new Error("Response was not ok");
         }
@@ -28,12 +28,12 @@ function Listing() {
   useEffect(() => {
     async function fetchCardData() {
       try {
-        const response = fetch("http://localhost/8000/listing");
+        const response = await fetch("http://localhost:8000/listings/index/");
         if (!response.ok) {
           throw new Error("Response was not ok.");
         }
 
-        const data = (await response).json();
+        const data = await response.json();
         setCardData(data);
       } catch (error) {
         console.log("Error fetching data: ", error);
@@ -44,7 +44,7 @@ function Listing() {
   }, []);
 
   const handleClick = () => {
-    setAllProperties(true);
+    setAllProperties(!allProperties);
   };
 
   const cardList = cardData.map((data) => <Card value={data} />);
@@ -53,19 +53,19 @@ function Listing() {
   return (
     <section
       id="listings"
-      className="card-container | container listing-section"
+      className="card-container | listing-section container"
     >
       <div>
         <h2 className="underline-text | my-4">Available Rooms</h2>
       </div>
 
-      <div className=" mt-6 p-6 grid sm:grid-cols-2 grid-cols-1 gap-4">
-        {allProperties ? allCardList : cardList}
+      <div className="mt-6 grid grid-cols-1 gap-4 p-6 sm:grid-cols-2">
+        {allProperties ? cardList : allCardList}
       </div>
-      <div className="text-center my-6">
+      <div className="my-6 text-center">
         <button
           onClick={handleClick}
-          className="btn-big btn-orange | hover:scale-105 transition hover:shado"
+          className="btn-big btn-orange | hover:shado transition hover:scale-105"
         >
           View more
         </button>

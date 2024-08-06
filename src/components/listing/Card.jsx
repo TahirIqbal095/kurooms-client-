@@ -3,18 +3,18 @@ import "./card.css";
 function Card(props) {
   return (
     <>
-      <div className="overflow-hidden shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl rounded-lg cursor-pointer">
-        <div className="w-full block h-full">
+      <div className="transform cursor-pointer overflow-hidden rounded-lg shadow-lg transition duration-500 ease-in-out hover:-translate-y-1 hover:shadow-2xl">
+        <div className="block h-full w-full">
           <img
             alt="blog photo"
             src={props.value.picture_url}
             className="max-h-40 w-full object-cover"
           />
           <div className="w-full p-4">
-            <p className="text-[var(--clr-green)] text-2xl font-medium">
+            <p className="text-2xl font-medium text-[var(--clr-green)]">
               {props.value.title}
             </p>
-            <a className="text-sm font-medium mb-2">
+            <a className="mb-2 text-sm font-medium">
               <i className="fa-solid fa-location-dot"></i>
               <span className="ml-2">{props.value.address}</span>
             </a>
@@ -25,19 +25,19 @@ function Card(props) {
                 Read More
               </a>
             </p>
-            <div className="flex flex-wrap items-center  gap-8">
-              <div className="flex items-center  gap-1 mt-2">
+            <div className="flex flex-wrap items-center gap-8">
+              <div className="mt-2 flex items-center gap-1">
                 <i className="fa-solid fa-indian-rupee-sign"></i>
                 <span>{props.value.rent_per_month}</span>
               </div>
 
-              <div className="flex items-center  gap-1 mt-2">
+              <div className="mt-2 flex items-center gap-1">
                 <i className="fa-solid fa-house-user"></i>
                 <span>{props.value.type}</span>
               </div>
             </div>
 
-            <button className="btn btn-green | mt-4 hover:scale-105 transition hover:shadow">
+            <button className="btn btn-green | mt-4 transition hover:scale-105 hover:shadow">
               Details
             </button>
           </div>
