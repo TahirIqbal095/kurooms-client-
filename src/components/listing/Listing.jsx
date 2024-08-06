@@ -7,6 +7,8 @@ function Listing() {
   const [cardData, setCardData] = useState([]);
   const [allProperties, setAllProperties] = useState(false);
 
+  document.onrelo;
+
   useEffect(() => {
     async function fetchCardData() {
       try {
@@ -41,10 +43,10 @@ function Listing() {
     }
 
     fetchCardData();
-  }, []);
+  }, [allProperties]);
 
   const handleClick = () => {
-    setAllProperties(!allProperties);
+    setAllProperties((prev) => !prev);
   };
 
   const cardList = cardData.map((data) => <Card value={data} />);
@@ -54,13 +56,14 @@ function Listing() {
     <section
       id="listings"
       className="card-container | listing-section container"
+      onLoad={handleClick}
     >
       <div>
         <h2 className="underline-text | my-4">Available Rooms</h2>
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 p-6 sm:grid-cols-2">
-        {allProperties ? cardList : allCardList}
+        {allProperties ? allCardList : cardList}
       </div>
       <div className="my-6 text-center">
         <button
