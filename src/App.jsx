@@ -7,13 +7,14 @@ import Footer from "./components/footer/Footer";
 import { SidebarProvider } from "./context/SidebarContext";
 
 import "./index.css";
-import { useEffect, useState } from "react";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
     <>
       <SidebarProvider>
         <Navbar />
+        <Sidebar />
       </SidebarProvider>
       <Hero />
       <Banner />

@@ -1,20 +1,23 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useContext } from "react";
 
 export const SidebarContext = createContext();
-export const ToggleContext = createContext();
+
+export const useSidebar = () => {
+  const sidebar = useContext(SidebarContext);
+  return sidebar;
+};
 
 export function SidebarProvider({ children }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   function toggleSidebar() {
-    setSidebarOpen((prev) => !prev);
+    setSidebarOpen(!sidebarOpen);
+    document.body.classList.toggle("noscroll", !sidebarOpen);
   }
 
   return (
-    <SidebarContext.Provider value={toggleSidebar}>
-      <ToggleContext.Provider value={sidebarOpen}>
-        {children}
-      </ToggleContext.Provider>
+    <SidebarContext.Provider value={{ sidebarOpen, toggleSidebar }}>
+      {children}
     </SidebarContext.Provider>
   );
 }

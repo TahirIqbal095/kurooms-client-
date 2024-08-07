@@ -1,13 +1,10 @@
-import { useContext } from "react";
 import { TextAlignRightIcon } from "@radix-ui/react-icons";
-import Sidebar from "../sidebar/Sidebar";
-import { SidebarContext, ToggleContext } from "../../context/SidebarContext";
+import { useSidebar } from "../../context/SidebarContext";
 
 import "./nav.css";
 
 function Navbar() {
-  const setSidebar = useContext(SidebarContext);
-  const toggle = useContext(ToggleContext);
+  const sidebarState = useSidebar();
 
   return (
     <>
@@ -22,21 +19,21 @@ function Navbar() {
             <li>About</li>
           </ul>
           <div className="register">
-            <button className="btn btn-orange | mx-2 hover:scale-105 transition hover:shadow">
+            <button className="btn btn-orange | mx-2 transition hover:scale-105 hover:shadow">
               Login
             </button>
-            <button className="btn btn-green | mx-2 hover:scale-105 transition hover:shadow">
+            <button className="btn btn-green | mx-2 transition hover:scale-105 hover:shadow">
               Sign up
             </button>
           </div>
         </div>
 
-        <div className="sidebar">
-          <button className="z-10" onClick={setSidebar}>
-            <TextAlignRightIcon className="h-10 w-10 font-bold"></TextAlignRightIcon>
-          </button>
-        </div>
-        {toggle ? <Sidebar /> : null}
+        <button
+          className="hamburger | right-4 top-4 z-10"
+          onClick={() => sidebarState.toggleSidebar()}
+        >
+          <TextAlignRightIcon className="h-10 w-10 font-bold"></TextAlignRightIcon>
+        </button>
       </nav>
     </>
   );
