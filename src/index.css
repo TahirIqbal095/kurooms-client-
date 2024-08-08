@@ -45,6 +45,10 @@
   color: var(--text-gray-light);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-primary);
   font-size: var(--fs-body);

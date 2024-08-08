@@ -8,7 +8,7 @@ export const useSidebar = () => {
 };
 
 export function SidebarProvider({ children }) {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   function toggleSidebar() {
     setSidebarOpen(!sidebarOpen);

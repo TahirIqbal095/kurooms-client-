@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   right: -250px;
-  height: 100vh;
+  height: 100%;
   width: min(100%, 250px);
   background-color: var(--bg-primary);
   overflow-x: hidden;

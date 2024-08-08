@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { useSidebar } from "../../context/SidebarContext";
 
@@ -18,15 +20,25 @@ function Sidebar() {
         </div>
         <div>
           <ul className="mt-16 text-xl">
-            <li>Home</li>
-            <li>Rooms</li>
-            <li>About</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/listing-all">Rooms</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About us</Link>
+            </li>
           </ul>
         </div>
 
         <div className="sidebar-btn | absolute bottom-6">
-          <button className="btn btn-orange | mb-4 block">Sign up</button>
-          <button className="btn btn-green | block">Login</button>
+          <Link to="/sign-up" className="btn btn-orange | mb-4 block">
+            Sign up
+          </Link>
+          <Link to="/sign-in" className="btn btn-green | block">
+            Login
+          </Link>
         </div>
       </div>
       <div

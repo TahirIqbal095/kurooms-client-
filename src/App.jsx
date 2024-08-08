@@ -1,25 +1,28 @@
-import Navbar from "./components/navbar/Navbar";
-import Listing from "./components/listing/Listing";
-import Hero from "./components/hero/Hero";
-import Banner from "./components/banner/Banner";
-import Footer from "./components/footer/Footer";
+import Signup from "./components/register/Signup";
+import Signin from "./components/register/Signin";
+import SharedLayout from "./components/SharedLayout";
+import Home from "./components/Home";
+import About from "./components/about/About";
+import ListingAll from "./components/listing/ListingAll";
 
-import { SidebarProvider } from "./context/SidebarContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
-import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   return (
     <>
-      <SidebarProvider>
-        <Navbar />
-        <Sidebar />
-      </SidebarProvider>
-      <Hero />
-      <Banner />
-      <Listing />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SharedLayout />}>
+            <Route index element={<Home />} />
+            <Route path="sign-in" element={<Signin />} />
+            <Route path="sign-up" element={<Signup />} />
+            <Route path="about-us" element={<About />} />
+            <Route path="listing-all" element={<ListingAll />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
